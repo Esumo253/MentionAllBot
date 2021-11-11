@@ -82,9 +82,9 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = await event.get_reply_message()
     if msg == None:
-        return await event.respond("__I can't mention members for older messages! (messages which are sent before I'm added to group)__")
+        return await event.respond("__Я не могу упоминать участников для старых сообщения! (сообщения, отправленные до того, как меня добавят в группу)__")
   else:
-    return await event.respond("__Reply to a message or give me some text to mention others!__")
+    return await event.respond("__Ответьте на сообщение или дайте мне сообщения, чтобы упомянуть других!__")
   
   spam_chats.append(chat_id)
   usrnum = 0
@@ -111,13 +111,13 @@ async def mentionall(event):
 @client.on(events.NewMessage(pattern="^/cancel$"))
 async def cancel_spam(event):
   if not event.chat_id in spam_chats:
-    return await event.respond('__There is no proccess on going...__')
+    return await event.respond('__Нет постоянного процесса...__')
   else:
     try:
       spam_chats.remove(event.chat_id)
     except:
       pass
-    return await event.respond('__Stopped.__')
+    return await event.respond('__Остановлен.__')
 
 print(">> BOT STARTED <<")
 client.run_until_disconnected()
