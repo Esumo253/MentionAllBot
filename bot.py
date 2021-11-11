@@ -21,12 +21,12 @@ spam_chats = []
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply(
-    "__**I'm MentionAll Bot**, I can mention almost all members in group or channel 👻\nClick **/help** for more information__\n\n Follow [@AnjanaMadu](https://github.com/AnjanaMadu) on Github",
+    "__**Я TagAllMaster Bot**, я могу упомянуть почти всех участников группы 👻\nНажмите /help для получения дополнительной информации__\n\n Мой создатель [Айед] (https://t.me/esumo)",
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/harp_tech'),
-        Button.url('📦 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
+        Button.url('📣 Канал', 'https://t.me/TagAllMaster'),
+        Button.url('👨‍💻 Разработчик', 'https://t.me/esumo')
       ]
     )
   )
@@ -39,8 +39,8 @@ async def help(event):
     link_preview=False,
     buttons=(
       [
-        Button.url('📣 Channel', 'https://t.me/harp_tech'),
-        Button.url('📦 Source', 'https://github.com/AnjanaMadu/MentionAllBot')
+        Button.url('📣 Канал', 'https://t.me/TagAllMaster'),
+        Button.url('👨‍💻 Разработчик', 'https://t.me/esumo')
       ]
     )
   )
