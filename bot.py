@@ -49,7 +49,7 @@ async def help(event):
 async def mentionall(event):
   chat_id = event.chat_id
   if event.is_private:
-    return await event.respond("__This command can be use in groups and channels!__")
+    return await event.respond("__Эту команду можно использовать в группах!__")
   
   is_admin = False
   try:
@@ -71,10 +71,10 @@ async def mentionall(event):
     ):
       is_admin = True
   if not is_admin:
-    return await event.respond("__Only admins can mention all!__")
+    return await event.respond("__Только администраторы могут упоминать все!__")
   
   if event.pattern_match.group(1) and event.is_reply:
-    return await event.respond("__Give me one argument!__")
+    return await event.respond("__Приведите мне один аргумент!__")
   elif event.pattern_match.group(1):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(1)
