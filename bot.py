@@ -34,7 +34,7 @@ async def start(event):
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "**Меню справки TagAllMasterBot**\n\nКоманда: /mentionall\n__Эту команду можно использовать с текстом, который вы хотите упомянуть другим.__\nПример: /mentionall добрым утром!\n__Вы можете использовать эту команду в качестве ответа на любое сообщение. Бот будет отмечать пользователей на это ответное сообщение__.\n\Мой создатель <a href='tg://user?id=812909819'> Айед </a>"
-  await event.reply(Github
+  await event.reply
     helptext,
     link_preview=False,
     buttons=(
